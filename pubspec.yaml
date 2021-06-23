@@ -1,0 +1,46 @@
+name: raport
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cached_network_image: ^2.5.0
+  cupertino_icons: ^1.0.0
+  fancy_drawer: ^1.0.0
+  floating_bottom_navigation_bar: ^1.4.1
+  flutter_launcher_icons: ^0.8.1
+  format_indonesia: ^0.1.0
+  http: ^0.12.2
+  pull_to_refresh: 1.6.3
+  rxdart: ^0.25.0
+  shared_preferences: ^0.5.12+4
+  toast: ^0.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter_icons:
+  android: true
+  ios: false
+  image_path: "assets/images/logo.jpg"
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Comfortaa
+      fonts:
+        - asset: assets/fonts/Comfortaa.ttf
+        - asset: assets/fonts/Comfortaa-Bold.ttf
+          weight: 700
+
+  assets:
+    - assets/images/
