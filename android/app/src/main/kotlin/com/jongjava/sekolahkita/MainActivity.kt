@@ -1,4 +1,4 @@
-package com.example.raport
+package com.jongjava.sekolahkita
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -267,7 +267,7 @@ class ApiProviders {
     try {
       final res = await http.get(uri).timeout(const Duration(seconds: 11));
       if (res.statusCode == 200) {
-        print(res.body);
+        // print(res.body);
         return SyaratModel.fromJson(json.decode(res.body));
       } else if (res.statusCode == 404) {
         return SyaratModel.fromJson(json.decode(res.body));
