@@ -24,7 +24,8 @@ class _LoginViewState extends State<LoginView> {
     Toast.show('Loading..', context,
         duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
     if (username.text == "" || password.text == "") {
-      print("tidak boleh kosong");
+      Toast.show('Tidak boleh kosong!', context,
+          duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
       _isTrue = false;
       _validate = true;
     } else {
@@ -41,7 +42,8 @@ class _LoginViewState extends State<LoginView> {
         } else {
           _validate = false;
           _isTrue = true;
-          print("Login gagal");
+          Toast.show('Username atau Password salah!', context,
+              duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
         }
       });
     }
