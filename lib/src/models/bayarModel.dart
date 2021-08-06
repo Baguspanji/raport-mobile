@@ -37,10 +37,12 @@ class Datum {
   Datum({
     this.bayar,
     this.status,
+    this.tanggal,
   });
 
   String bayar;
   int status;
+  DateTime tanggal;
 
   factory Datum.fromRawJson(String str) => Datum.fromJson(json.decode(str));
 
@@ -49,10 +51,13 @@ class Datum {
   factory Datum.fromJson(Map<String, dynamic> json) => Datum(
         bayar: json["bayar"],
         status: json["status"],
+        tanggal: DateTime.parse(json["tanggal"]),
       );
 
   Map<String, dynamic> toJson() => {
         "bayar": bayar,
         "status": status,
+        "tanggal":
+            "${tanggal.year.toString().padLeft(4, '0')}-${tanggal.month.toString().padLeft(2, '0')}-${tanggal.day.toString().padLeft(2, '0')}",
       };
 }

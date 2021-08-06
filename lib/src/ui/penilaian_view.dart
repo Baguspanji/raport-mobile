@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
 import 'package:raport/src/controllers/usersBloc.dart';
 import 'package:raport/src/helper/uiHelper.dart';
 import 'package:raport/src/models/nilaiModel.dart';
 import 'package:raport/src/shared/preference.dart';
-import 'package:raport/src/ui/utils/dialog_box.dart';
+import 'package:raport/src/ui/utils/dialog_box_nilai.dart';
 
 class NilaiView extends StatefulWidget {
   final String dari;
@@ -59,7 +58,8 @@ class _NilaiViewState extends State<NilaiView> {
                     width: _size.width * 0.9,
                     height: _size.height * 0.1,
                     alignment: Alignment.centerLeft,
-                    margin: EdgeInsets.only(bottom: 20),
+                    margin: EdgeInsets.only(
+                        top: snapshot.data.data[i] == 0 ? 0 : 20),
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: Colors.grey[200],
