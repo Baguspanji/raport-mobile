@@ -224,14 +224,15 @@ class _HomePageState extends State<HomePage> {
                           ]),
                       child: Obx(() {
                         var detail = con.userDetailData.value;
+
+                        if (loading) {
+                          return Center(child: CircularProgressIndicator());
+                        }
+
                         if (detail.nama == null) {
                           return Center(
                             child: Text('data kosong'),
                           );
-                        }
-
-                        if (loading) {
-                          return Center(child: CircularProgressIndicator());
                         }
                         return GFListTile(
                           avatar: GFAvatar(
