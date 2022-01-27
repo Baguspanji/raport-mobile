@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:raport/src/index.dart';
-import 'package:raport/src/ui/home_view.dart';
+import 'package:get/get.dart';
+import 'package:raport/src/configs/route_config.dart';
+import 'package:raport/src/pages/splash/index.dart';
 
-class App extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       theme: ThemeData(fontFamily: 'Comfortaa'),
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
-      routes: {
-        '/': (context) => SplashScreen(),
-        '/home': (context) => HomeView(),
-        '/login': (context) => LoginView(),
-      },
+      title: 'Sekolah Kita',
+      initialRoute: SplashPage.routeName,
+      getPages: routes,
     );
   }
 }
